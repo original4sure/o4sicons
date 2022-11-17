@@ -1,0 +1,30 @@
+{
+  "name": "o4sicons",
+  "version": "1.0.0",
+  "description": "O4S Icons Package",
+  "files": [
+    "dist",
+    "resources"
+  ],
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ft-dist-old": "fantasticon fill-feather -o ft-dist -n o4sicons -p ft --normalize true --selector oi ",
+    "ft-dist": "fantasticon fill-feather -o dist/ft -n o4sicons --selector .oi -p oi  --normalize true",
+    "fixer-ft": "oslllo-svg-fixer -s ft-optimize -d fill-feather/ft",
+    "ft-svg-optimize": "svgo -f stroke-feather/12 -o ft-optimize/",
+    "ft-build": "npm run ft-svg-optimize && npm run fixer-ft && npm run ft-dist",
+    "build": "npm run ft-dist"
+  },
+  "keywords": [
+    "o4s",
+    "icons"
+  ],
+  "author": "Maheshwaran G",
+  "license": "ISC",
+  "devDependencies": {
+    "fantasticon": "^1.2.3",
+    "oslllo-svg-fixer": "^2.2.0",
+    "svgo": "^3.0.1"
+  }
+}
